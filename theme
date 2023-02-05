@@ -1,0 +1,406 @@
+@media {
+  
+/* AUTO=body_background */ body { background: url(/assets/background/agsquare.png) repeat; }
+@import url(https://css-club.web.app/css/compact_news--grid.css);
+@import url(https://raw.githubusercontent.com/kaurkaur/Shikimori/master/CSS/HistoryDates.css);
+@import url(https://css-club.web.app/css/fixed_cover.min.css);
+@import url(https://css-club.web.app/css/custom_posters.min.css);
+@import url(https://newlab.ga/icons/css/borr-embedded.css); /*подключение иконок */
+@import url(https://newlab.ga/shi/icons.css); /* иконки которые я поменял */
+
+@media (min-width:768px) { 
+.block.achievements .cc-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 10px;
+}
+
+.block.achievements .cc-2 > .c-column {
+  width: 100% !important;
+}
+
+.block.achievements .cc-2 > .c-column:nth-child(1) {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.block.achievements .cc-2 > .c-column:nth-child(2) {
+  grid-area: 1 / 2 / 2 / 3;
+}
+.block.achievements .cc-2 > .c-column:nth-child(3) {
+  grid-area: 2 / 1 / 3 / 4;
+}
+.block.achievements .cc-2 > .c-column:nth-child(4) {
+  grid-area: 1 / 3 / 2 / 4;
+}
+
+.p-profiles-show .achievements .cc-authors .b-achievement {
+  width: 49.25%;
+}
+
+.cc-authors > *:nth-child(2),
+.cc-authors > *:nth-child(4) {
+  display: none;
+}
+
+.cc-franchises {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-column-gap: 5px;
+}
+
+.p-profiles-show .achievements .cc-franchises .b-badge {
+  width: 100%;
+}
+
+#profiles_show .cc-2 > .c-column {
+  margin-bottom: 10px;
+}
+}
+  
+.activity {
+    display: none;
+}
+  
+.l-footer {
+    visibility:hidden;
+}
+
+@media (min-width: 1024px){.p-animes_collection .cc-entries{--columns:7;--gap:10px;display:inline}.p-animes_collection-index .cc-entries::after{display:none}.p-animes_collection[class] .cc-entries .c-column:nth-child(n){clear:none;float:none;display:inline-block;vertical-align:top;width:calc((100% - (var(--gap) * var(--columns))) / var(--columns))!important;margin-right:var(--gap)}}
+  
+.b-feedback > .hover-activator {
+  background: #4b80c000;
+}
+  
+html[data-color-mode="light"] {
+  --link-active-color: #484848;
+}
+  
+.b-stats_bar.anime .bar .second {
+  background: #6D6D6D;
+}
+  
+.b-stats_bar.anime .bar .first {
+  background: #484848;
+}
+  
+.b-stats_bar.manga .bar .second {
+  background: #6D6D6D;
+}
+  
+.b-stats_bar.manga .bar .first {
+  background: #484848;
+}
+  
+.b-stats_bar.lifetime .bar .first {
+  background: #484848;
+}
+
+.p-profiles-show .lifetime .times .time.checked::before {
+  content: "✓";
+  color: #6d6d6d;
+}
+  
+[href*="characters/202261-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/jkE3CN0.jpg);
+}
+  
+[href*="characters/137996-"] {
+  --show-default: 0;
+  --custom-image: url(https://moe.shikimori.one/system/user_images/original/763004/2104997.jpg);
+}
+  
+[href*="characters/182452-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/2/455790.jpg);
+}
+
+[href*="characters/182976-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/12/488991.jpg);
+}
+  
+[href*="characters/141354-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/14/350784.jpg);
+}
+  
+[href*="characters/67077-"] {
+  --show-default: 0;
+  --custom-image: url(https://static.wikia.nocookie.net/yahari/images/5/5e/Portal-Shizuka.png/revision/latest?cb=20141119204342);
+}
+  
+[href*="characters/170734-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/YQTi5k8.jpg);
+}
+  
+[href*="characters/173139-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/j6rxTgG.png);
+}
+
+[href*="characters/193560-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/5/483575.jpg);
+}
+  
+[href*="characters/206172-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/5WW4HFX.png);
+}
+
+[href*="characters/165831-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/EQRyr9Y.jpg);
+}
+
+[href*="characters/196768-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/q858wNJ.png);
+}
+
+[href*="characters/181735-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/Gn8iou7.jpg);
+}
+
+[href*="characters/21512-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/QkqaUGN.jpg);
+}
+
+[href*="characters/83209-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/WuOhRzk.jpg);
+}
+
+[href*="characters/120025-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/5fNGlFA.jpg);
+}
+
+[href*="characters/1111-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/CELQPD3.png);
+}
+
+[href*="characters/151335-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/uJk7plN.jpg);
+}
+
+[href*="characters/67067-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/G9Dndy2.png);
+}
+  
+[href*="characters/161286-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/Ci2xMjn.jpg);
+}
+
+[href*="characters/152119-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/iRdf6mn.jpg);
+}
+
+[href*="characters/23602-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/Rp4vNHQ.jpg);
+}
+
+[href*="characters/118739-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/16/401221.jpg);
+}
+
+[href*="characters/206934-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/2057M0l.png);
+}
+
+[href*="characters/33221-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/T8XGM86.jpg);
+}
+
+[href*="characters/127141-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/9SKSlFP.jpg);
+}
+  
+[href*="characters/134211-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/10/302347.jpg);
+}
+  
+[href*="characters/141739-"] {
+  --show-default: 0;
+  --custom-image: url(https://cdn.myanimelist.net/images/characters/16/385896.jpg);
+}
+
+[href*="mangas/64055-"] {
+  --show-default: 0;
+  --custom-image: url(https://i.imgur.com/KiyR3lf.jpg);
+}
+
+.b-feedback > .marker-positioner {
+  display: none;
+}
+
+.p-profiles-show .cc-2a.m30 {
+    display: none;
+}
+
+.p-profiles header.head .misc:after {  
+  content: " ";
+  font-size: 11px;
+  line-height: 12px;
+}
+
+.p-profiles header.head .misc {
+  font-size: 0px; 
+}
+  
+.p-profiles .profile-head .c-brief header .notice>span:last-child {
+    display: none;
+}
+
+.p-profiles .profile-head .c-brief header .notice span::after {
+  content: '';
+}
+  
+.p-profiles .profile-head .c-brief header .notice span::after {
+  content: '[(－－)]..zzZ';
+}
+  
+@media (min-width: 481px) {
+  .p-profiles-favorites .cc-favourites {
+    display: grid;
+    align-items: flex-start;
+  }
+
+  .p-profiles-favorites .cc-favourites .c-column {
+    width: 100% !important;
+  }
+
+  .p-profiles-favorites .cc-favourites {
+    grid-template-columns: repeat(var(--favorites-columns-sm, 5), 1fr);
+    gap: var(--favorites-gutters, 8px);
+  }
+}
+
+@media (min-width: 768px) {
+  .p-profiles-favorites .cc-favourites {
+    grid-template-columns: repeat(var(--favorites-columns-md, 7), 1fr);
+  }
+}
+  
+@media (max-width: 479px) {
+        .p-profiles .profile-head .c-history {
+                display: block;
+                float: none;
+                width: auto;
+                margin: 0;
+        }
+        .p-profiles .profile-head .c-history .b-block_list {
+                display: flex;
+                margin-top: -0.5em;
+                overflow-x: auto;
+        }
+        .p-profiles .profile-head .c-history .entry:nth-child(n) {
+                flex-shrink: 0;
+                min-width: 200px;
+                max-width: 260px;
+                padding: 0.5em;
+                margin: 0 0.5em 0 0;
+                border: 0;
+        }
+
+.p-profiles .profile-head .c-history .b-block_list::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+        .b-block_list {
+                display: block;
+                width: 100%;
+                margin-top: 6px;
+                position: relative;
+                overflow: hidden;
+                height: 58px !important;
+        }
+        .p-profiles .profile-head .c-history .entry {
+                margin: 0;
+                position: relative;
+                display: block;
+                clear: both;
+                float: none;
+                width: 100% !important;
+                animation: history 4s steps(3, end) infinite !important;
+                box-shadow: none !important;
+        }
+        .p-profiles .profile-head .c-history .entry:first-child {
+                border-top: none;
+                margin-top: 0;
+                padding-top: 0;
+        }
+        .p-profiles .profile-head .c-history .entry .title {
+                width: auto;
+                animation: none !important;
+        }
+        .p-profiles .profile-head .c-history .entry .title,
+        .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
+                margin: 0 15%;
+        }
+        .p-profiles .profile-head .c-history .entry .title {
+                padding-top: 3px;
+        }
+        .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
+                width: auto;
+                display: block;
+        }
+        .p-profiles .profile-head .c-history .entry:first-child {
+                animation: animhist 5s ease-in-out infinite;
+                animation-delay: 2s;
+        }
+}
+@keyframes runningtext {
+        25% {
+                text-indent: -80em;
+        }
+        25.000000001% {
+                text-indent: 25em;
+        }
+        50% {
+                text-indent: 0;
+        }
+}
+@keyframes history {
+        0% {
+                transform: translateX(0);
+        }
+        100% {
+                transform: translateY(-205px);
+        }
+}
+@keyframes animhist {
+        0% {
+                display: block;
+        }
+        50% {
+                display: none;
+        }
+        100% {
+                display: block;
+        }
+}
+  
+html[data-color-mode="light"] {
+  --link-color: #123;
+  --link-hover-color: #aaa;
+  --headline-color: #123;
+   
+  }
