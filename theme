@@ -1,261 +1,85 @@
-@media {
-  
-/* AUTO=body_background */ body { background: url(/assets/background/agsquare.png) repeat; }
-@import url(https://css-club.web.app/css/compact_news--grid.css);
-@import url(https://raw.githubusercontent.com/kaurkaur/Shikimori/master/CSS/HistoryDates.css);
-@import url(https://css-club.web.app/css/fixed_cover.min.css);
-@import url(https://css-club.web.app/css/custom_posters.min.css);
-@import url(https://newlab.ga/icons/css/borr-embedded.css); /*подключение иконок */
-@import url(https://newlab.ga/shi/icons.css); /* иконки которые я поменял */
-
-@media (min-width:768px) { 
-.block.achievements .cc-2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 10px;
+.b-user_history-line .date {
+  font-size: 0;
+  white-space: nowrap;
 }
 
-.block.achievements .cc-2 > .c-column {
-  width: 100% !important;
+.b-user_history-line .date::before,
+.b-user_history-line .date::after {
+  display: inline-block;
+  vertical-align: top;
+  font-family: monospace;
+  font-size: 12px;
+  overflow: hidden;
 }
 
-.block.achievements .cc-2 > .c-column:nth-child(1) {
-  grid-area: 1 / 1 / 2 / 2;
-}
-.block.achievements .cc-2 > .c-column:nth-child(2) {
-  grid-area: 1 / 2 / 2 / 3;
-}
-.block.achievements .cc-2 > .c-column:nth-child(3) {
-  grid-area: 2 / 1 / 3 / 4;
-}
-.block.achievements .cc-2 > .c-column:nth-child(4) {
-  grid-area: 1 / 3 / 2 / 4;
+.b-user_history-line .date::before {
+  position: relative;
+  width: 72px; /* Размер даты */
+  margin-right: 10px; /* Отступ между датой и временем */
+  white-space: nowrap;
+  z-index: 1;
 }
 
-.p-profiles-show .achievements .cc-authors .b-achievement {
-  width: 49.25%;
+.b-user_history-line .date::after {
+  content: attr(datetime);
+  width: 34px; /* Размер времени */
+  text-indent: -72px; /* Размер даты */
 }
 
-.cc-authors > *:nth-child(2),
-.cc-authors > *:nth-child(4) {
-  display: none;
+.b-user_history-line .date[datetime*='-01T']::before{--HD-day: '01';}
+.b-user_history-line .date[datetime*='-02T']::before{--HD-day: '02';}
+.b-user_history-line .date[datetime*='-03T']::before{--HD-day: '03';}
+.b-user_history-line .date[datetime*='-04T']::before{--HD-day: '04';}
+.b-user_history-line .date[datetime*='-05T']::before{--HD-day: '05';}
+.b-user_history-line .date[datetime*='-06T']::before{--HD-day: '06';}
+.b-user_history-line .date[datetime*='-07T']::before{--HD-day: '07';}
+.b-user_history-line .date[datetime*='-08T']::before{--HD-day: '08';}
+.b-user_history-line .date[datetime*='-09T']::before{--HD-day: '09';}
+.b-user_history-line .date[datetime*='-10T']::before{--HD-day: '10';}
+.b-user_history-line .date[datetime*='-11T']::before{--HD-day: '11';}
+.b-user_history-line .date[datetime*='-12T']::before{--HD-day: '12';}
+.b-user_history-line .date[datetime*='-13T']::before{--HD-day: '13';}
+.b-user_history-line .date[datetime*='-14T']::before{--HD-day: '14';}
+.b-user_history-line .date[datetime*='-15T']::before{--HD-day: '15';}
+.b-user_history-line .date[datetime*='-16T']::before{--HD-day: '16';}
+.b-user_history-line .date[datetime*='-17T']::before{--HD-day: '17';}
+.b-user_history-line .date[datetime*='-18T']::before{--HD-day: '18';}
+.b-user_history-line .date[datetime*='-19T']::before{--HD-day: '19';}
+.b-user_history-line .date[datetime*='-20T']::before{--HD-day: '20';}
+.b-user_history-line .date[datetime*='-21T']::before{--HD-day: '21';}
+.b-user_history-line .date[datetime*='-22T']::before{--HD-day: '22';}
+.b-user_history-line .date[datetime*='-23T']::before{--HD-day: '23';}
+.b-user_history-line .date[datetime*='-24T']::before{--HD-day: '24';}
+.b-user_history-line .date[datetime*='-25T']::before{--HD-day: '25';}
+.b-user_history-line .date[datetime*='-26T']::before{--HD-day: '26';}
+.b-user_history-line .date[datetime*='-27T']::before{--HD-day: '27';}
+.b-user_history-line .date[datetime*='-28T']::before{--HD-day: '28';}
+.b-user_history-line .date[datetime*='-29T']::before{--HD-day: '29';}
+.b-user_history-line .date[datetime*='-30T']::before{--HD-day: '30';}
+.b-user_history-line .date[datetime*='-31T']::before{--HD-day: '31';}
+
+.b-user_history-line .date[datetime*='-01-']::before{--HD-month: 'янв';}
+.b-user_history-line .date[datetime*='-02-']::before{--HD-month: 'фев';}
+.b-user_history-line .date[datetime*='-03-']::before{--HD-month: 'мар';}
+.b-user_history-line .date[datetime*='-04-']::before{--HD-month: 'апр';}
+.b-user_history-line .date[datetime*='-05-']::before{--HD-month: 'май';}
+.b-user_history-line .date[datetime*='-06-']::before{--HD-month: 'июн';}
+.b-user_history-line .date[datetime*='-07-']::before{--HD-month: 'июл';}
+.b-user_history-line .date[datetime*='-08-']::before{--HD-month: 'авг';}
+.b-user_history-line .date[datetime*='-09-']::before{--HD-month: 'сен';}
+.b-user_history-line .date[datetime*='-10-']::before{--HD-month: 'окт';}
+.b-user_history-line .date[datetime*='-11-']::before{--HD-month: 'ноя';}
+.b-user_history-line .date[datetime*='-12-']::before{--HD-month: 'дек';}
+
+.b-user_history-line .date::before{
+	content: var(--HD-day)' 'var(--HD-month)' 'attr(datetime);
 }
 
-.cc-franchises {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-column-gap: 5px;
-}
-
-.p-profiles-show .achievements .cc-franchises .b-badge {
-  width: 100%;
-}
-
-#profiles_show .cc-2 > .c-column {
-  margin-bottom: 10px;
-}
-}
-  
-.activity {
-    display: none;
-}
-  
-.l-footer {
-    visibility:hidden;
-}
-
-@media (min-width: 1024px){.p-animes_collection .cc-entries{--columns:7;--gap:10px;display:inline}.p-animes_collection-index .cc-entries::after{display:none}.p-animes_collection[class] .cc-entries .c-column:nth-child(n){clear:none;float:none;display:inline-block;vertical-align:top;width:calc((100% - (var(--gap) * var(--columns))) / var(--columns))!important;margin-right:var(--gap)}}
-  
-.b-feedback > .hover-activator {
-  background: #4b80c000;
-}
-  
-html[data-color-mode="light"] {
-  --link-active-color: #484848;
-}
-  
-.b-stats_bar.anime .bar .second {
-  background: #6D6D6D;
-}
-  
-.b-stats_bar.anime .bar .first {
-  background: #484848;
-}
-  
-.b-stats_bar.manga .bar .second {
-  background: #6D6D6D;
-}
-  
-.b-stats_bar.manga .bar .first {
-  background: #484848;
-}
-  
-.b-stats_bar.lifetime .bar .first {
-  background: #484848;
-}
-
-.p-profiles-show .lifetime .times .time.checked::before {
-  content: "✓";
-  color: #6d6d6d;
-}
-  
-.b-feedback > .marker-positioner {
-  display: none;
-}
-
-.p-profiles-show .cc-2a.m30 {
-    display: none;
-}
-
-.p-profiles header.head .misc:after {  
-  content: " ";
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.p-profiles header.head .misc {
-  font-size: 0px; 
-}
-  
-.p-profiles .profile-head .c-brief header .notice>span:last-child {
-    display: none;
-}
-
-.p-profiles .profile-head .c-brief header .notice span::after {
-  content: '';
-}
-  
-.p-profiles .profile-head .c-brief header .notice span::after {
-  content: '[(－－)]..zzZ';
-}
-  
-@media (min-width: 481px) {
-  .p-profiles-favorites .cc-favourites {
-    display: grid;
-    align-items: flex-start;
+@-moz-document url-prefix() {
+  .b-user_history-line .date::before {
+    width: 78px; /* Размер даты */
   }
-
-  .p-profiles-favorites .cc-favourites .c-column {
-    width: 100% !important;
-  }
-
-  .p-profiles-favorites .cc-favourites {
-    grid-template-columns: repeat(var(--favorites-columns-sm, 5), 1fr);
-    gap: var(--favorites-gutters, 8px);
+  .b-user_history-line .date::after {
+    text-indent: -78px; /* Размер даты */
   }
 }
-
-@media (min-width: 768px) {
-  .p-profiles-favorites .cc-favourites {
-    grid-template-columns: repeat(var(--favorites-columns-md, 7), 1fr);
-  }
-}
-  
-@media (max-width: 479px) {
-        .p-profiles .profile-head .c-history {
-                display: block;
-                float: none;
-                width: auto;
-                margin: 0;
-        }
-        .p-profiles .profile-head .c-history .b-block_list {
-                display: flex;
-                margin-top: -0.5em;
-                overflow-x: auto;
-        }
-        .p-profiles .profile-head .c-history .entry:nth-child(n) {
-                flex-shrink: 0;
-                min-width: 200px;
-                max-width: 260px;
-                padding: 0.5em;
-                margin: 0 0.5em 0 0;
-                border: 0;
-        }
-
-.p-profiles .profile-head .c-history .b-block_list::-webkit-scrollbar {
-    display: none;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-}
-}
-@media (min-width: 481px) and (max-width: 767px) {
-        .b-block_list {
-                display: block;
-                width: 100%;
-                margin-top: 6px;
-                position: relative;
-                overflow: hidden;
-                height: 58px !important;
-        }
-        .p-profiles .profile-head .c-history .entry {
-                margin: 0;
-                position: relative;
-                display: block;
-                clear: both;
-                float: none;
-                width: 100% !important;
-                animation: history 4s steps(3, end) infinite !important;
-                box-shadow: none !important;
-        }
-        .p-profiles .profile-head .c-history .entry:first-child {
-                border-top: none;
-                margin-top: 0;
-                padding-top: 0;
-        }
-        .p-profiles .profile-head .c-history .entry .title {
-                width: auto;
-                animation: none !important;
-        }
-        .p-profiles .profile-head .c-history .entry .title,
-        .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
-                margin: 0 15%;
-        }
-        .p-profiles .profile-head .c-history .entry .title {
-                padding-top: 3px;
-        }
-        .p-profiles .profile-head .c-history .entry .misc.date.unprocessed {
-                width: auto;
-                display: block;
-        }
-        .p-profiles .profile-head .c-history .entry:first-child {
-                animation: animhist 5s ease-in-out infinite;
-                animation-delay: 2s;
-        }
-}
-@keyframes runningtext {
-        25% {
-                text-indent: -80em;
-        }
-        25.000000001% {
-                text-indent: 25em;
-        }
-        50% {
-                text-indent: 0;
-        }
-}
-@keyframes history {
-        0% {
-                transform: translateX(0);
-        }
-        100% {
-                transform: translateY(-205px);
-        }
-}
-@keyframes animhist {
-        0% {
-                display: block;
-        }
-        50% {
-                display: none;
-        }
-        100% {
-                display: block;
-        }
-}
-  
-html[data-color-mode="light"] {
-  --link-color: #123;
-  --link-hover-color: #aaa;
-  --headline-color: #123;
-   
-  }
