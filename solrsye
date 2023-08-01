@@ -1,0 +1,99 @@
+/* Настройки */
+#profiles_show {
+  --profile-sidebar: 216px;
+  --profile-gutter: 48px;
+  --profile-margin: 24px;
+  --profile-content: calc(100% - var(--profile-sidebar) - var(--profile-gutter));
+
+  /* Костыль 1 */
+  --profile-avatar: 192px; /* нужна точная высота для margin-top Истории */
+}
+
+/** 
+ * RESET BLOCK
+ * Сброс стандартного макета
+ */
+
+/* Column's float reset */
+#profiles_show .profile-content > .cc-2,
+#profiles_show .profile-content > .cc-2 > .c-column,
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a > .c-column {
+  float: none;
+  width: auto;
+  margin: 0;
+  clear: none;
+  position: static;
+}
+/* Block's & Column's clearfix reset */
+#profiles_show .profile-head:after,
+#profiles_show .profile-content > .cc-2::after,
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a::after {
+  display: none;
+}
+/* Block's & Column's margin reset */
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a.m30 {
+  margin-bottom: 0 !important;
+}
+/* Block's & Column's margin re-set */
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a > :first-child,
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a > :last-child {
+  margin-bottom: var(--profile-margin) !important;
+}
+
+/** 
+ * LAYOUT BLOCK
+ * Настройка расположения основных блоков
+ */
+
+/* Sidebar blocks */
+#profiles_show .profile-head .c-history,
+#profiles_show .profile-head .avatar,
+#profiles_show .profile-head .c-additionals,
+#profiles_show .profile-content .lifetime,
+#profiles_show .profile-content .activity,
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a > :first-child,
+#profiles_show .profile-content > .cc-2 > .c-right > .cc-2a > :last-child,
+#profiles_show .profile-content > .achievements {
+  clear: left; /* блок не будет обтекать сайдбар */
+  overflow: hidden; /* clearfix'ы внутри блока не будут влиять на поток */
+
+  /* Создаём свои плавающие блоки сайдбара */
+  float: left;
+  width: var(--profile-sidebar);
+  margin: 0 var(--profile-gutter) var(--profile-margin) 0;
+}
+
+/* Content blocks */
+#profiles_show .profile-head .head,
+#profiles_show .profile-head .c-lists-info,
+#profiles_show .profile-content > .cc-2 > .c-right > .block,
+#profiles_show .profile-content > .about,
+#profiles_show .profile-content > .about + .block,
+#profiles_show .profile-content > .block:not(.achievements):last-child {
+  /* Основное свойство, чтоб блок не растекался по всей ширине страницы */
+  overflow: hidden;
+
+  /* Не обязательно, но рекомендуется для нижних блоков */
+  width: var(--profile-content);
+  margin: 0 0 var(--profile-margin) auto;
+}
+
+/** 
+ * LAYOUT SPECIAL BLOCK 
+ * Более точная настройка отдельных блоков
+ */
+
+#profiles_show .profile-head .c-history {
+  margin-top: calc(var(--profile-avatar) + var(--profile-margin));
+  margin-right: calc(var(--profile-sidebar) * -1);
+}
+
+#profiles_show .profile-head .avatar {
+  clear: none;
+  max-width: none;
+  text-align: center;
+}
+
+#profiles_show .profile-head .c-info {
+  overflow: visible;
+}
